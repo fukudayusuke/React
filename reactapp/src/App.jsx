@@ -7,8 +7,10 @@ import { StyledJsx } from "./components/StyledJsx";
 import { Child1 } from "./components/Child1";
 import { Child4 } from "./components/Child4";
 import { useCallback } from "react";
-import { Card } from "./components/Card";
 
+import { AdminFlagContext } from "./components/providers/AdminFlagProvider";
+import { useContext } from "react";
+import { Card } from "./components/Card";
 
 
 export const App = memo(() => 
@@ -17,7 +19,7 @@ export const App = memo(() =>
     console.log("APP rendering");
 
     const [ num, setNum ] = useState(0);
-    const [ isAdmin, setIsAdmin ] = useState(false);
+    const { isAdmin, setIsAdmin } = useContext(AdminFlagContext);
 
 //    useEffect( () => {
 //        alert();

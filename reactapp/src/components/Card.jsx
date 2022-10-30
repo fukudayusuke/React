@@ -13,14 +13,13 @@ const style = {
 };
 
 
-export const Card = ( prop ) =>
+export const Card = ( ) =>
 {
-    const { isAdmin } = prop;
 
     return (
         <div style={style}>
             <p>Fukuda Yusuke</p>
-            <EditButton isAdmin={isAdmin}/>
+            <EditButton/>
         </div>
     );
 }
